@@ -1,0 +1,12 @@
+
+
+import mpsm.api.ApiResponse
+
+model{
+    ApiResponse apiResponse
+}
+
+json{
+    meta apiResponse.generateMetaBlock()
+    results tmpl.doctors(apiResponse.results ?:[])
+}

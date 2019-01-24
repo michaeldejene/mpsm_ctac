@@ -1,0 +1,13 @@
+import mpsm.Doctors
+
+model{
+    Doctors doctors
+
+}
+
+json {
+
+    lastNames doctors.lastName
+    firstNames doctors.firstName
+    active      doctors.active
+}

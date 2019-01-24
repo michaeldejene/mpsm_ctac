@@ -1,0 +1,12 @@
+package doctors
+
+import mpsm.api.ApiResponse
+
+model{
+    ApiResponse apiResponse
+}
+
+json{
+    meta apiResponse.generateMetaBlock()
+
+}
