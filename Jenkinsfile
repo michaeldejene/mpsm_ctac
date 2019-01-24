@@ -1,20 +1,12 @@
+stage 'build_Project'
+node{
+echo 'Building..'
+  if(isUnix()){
+  echo 'second Building..'
+  sh 'gradle build --info'
 
-
-node {
-
-
-
-        stage "Build Artifacts", {
-            sh './gradlew clean assemble'
-
-
-        }
-
-
-         catch (e) {
-            
-            throw e
-        }
-    }
-
-
+  }
+  else{
+    bat 'gradle build --info'
+  }
+}
