@@ -3,7 +3,7 @@ node{
 echo 'Building..'
   if(isUnix()){
   echo 'second Building..'
-  sh 'gradle build --info'
+  sh 'gradlew build --info'
 
   }
   else{
