@@ -3,7 +3,7 @@ node{
 echo 'Building..'
   if(isUnix()){
   echo 'second Building..'
-  sh 'gradlew build --info'
+  sh './gradlew clean assemble'
 
   }
   else{
