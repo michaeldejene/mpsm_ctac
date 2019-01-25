@@ -103,7 +103,7 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     logSql: false
-    username: "${MYSQL_USER}"
+    username: "root"
 
 environments:
     development:
