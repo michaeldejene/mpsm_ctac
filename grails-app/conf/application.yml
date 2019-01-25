@@ -1,7 +1,7 @@
 ---
 grails:
     profile: web
-    serverURL: "localhost:8080"
+    serverURL: "http://ec2-3-92-74-143.compute-1.amazonaws.com:8080"
     codegen:
         defaultPackage: mpsm
     spring:
