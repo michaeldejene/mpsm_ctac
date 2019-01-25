@@ -41,7 +41,7 @@ class Pagination {
         if (params.customResourcePath) {
             previousUrl = offset == 0 ? null : "${serverUrl}${params.customResourcePath}" + getQueryString(params, lastOffset)
             currentUrl = "${serverUrl}${params.customResourcePath}" + getQueryString(params, offset)
-            nextUrl = total > 1 && nextOffset < total ? "${serverUrl}${params.customResourcePath}" + getQueryString(params, nextOffset) : currentUrl
+            nextUrl = total > 1 && nextOffset < total ? "${serverUrl}${params.customResourcePath}" + getQueryString(params, nextOffset) : null
         } else {
             String action = ''
             if (params.action != 'index') {
@@ -49,7 +49,7 @@ class Pagination {
             }
             previousUrl = offset == 0 ? null : "${serverUrl}/${params.controller}${action}" + getQueryString(params, lastOffset)
             currentUrl = "${serverUrl}/${params.controller}${action}" + getQueryString(params, offset)
-            nextUrl = total > 1 && nextOffset < total ? "${serverUrl}/${params.controller}${action}" + getQueryString(params, nextOffset) : currentUrl
+            nextUrl = total > 1 && nextOffset < total ? "${serverUrl}/${params.controller}${action}" + getQueryString(params, nextOffset) : null
         }
     }
 
